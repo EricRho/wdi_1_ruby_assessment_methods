@@ -6,6 +6,7 @@ end
 
 y = square(2)
 # What is the value of 'x' after this line executes?
+x = nil
 
 
 #### Question 2
@@ -17,6 +18,8 @@ end
 
 age = 10
 get_older(age)
+
+age = 11
 
 
 #### Question 3
@@ -34,11 +37,17 @@ end
 energy = 2
 jump
 
+jump = 2
+
 
 #### Question 4
 # Write a method that accepts a string and an optional multiplier (defaults to 3)
 # and returns the original string multiplied that many times (using the * operator).
 # Do not use an options hash or keyword arguments.
+
+def multiply(str, multiplier = 3)
+  str * multiplier
+end
 
 
 #### Question 5
@@ -48,3 +57,5 @@ def greeting(name:, salutation: 'Hi', volume: :low)
   greeting = "#{salutation} there, #{name}"
   volume == :high ? greeting.upcase : greeting
 end
+
+puts greeting(name: "puny humans", salutation: 'hello', volume: :high)
